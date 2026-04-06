@@ -230,7 +230,7 @@ export default function LandingPage() {
 
             <div className="divider">or</div>
 
-            <a href="#" className="patreon-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.patreon.com/INDRUWORLD" className="patreon-btn" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                 <path d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21 0 3.96-3.22 7.18-7.18 7.18-3.97 0-7.21-3.22-7.21-7.18 0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2V21.6z" />
               </svg>
@@ -240,25 +240,30 @@ export default function LandingPage() {
         </div>
 
         <div className="socials">
-          <a href="#" className="social-link" title="TikTok" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@_drumusic" className="social-link" title="TikTok" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52V6.8a4.84 4.84 0 01-1-.11z" />
             </svg>
           </a>
-          <a href="#" className="social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/_drumusic/" className="social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.3.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
             </svg>
           </a>
-          <a href="#" className="social-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@DRUCRUW" className="social-link" title="YouTube" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/Drewellamusic" className="social-link" title="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
             </svg>
           </a>
         </div>
 
         <div className="footer">
-          <p>© 2026 DRü · Built by <a href="#">Arias Studio</a></p>
+          <p>© 2026 DRü · Built by <a href="https://www.ariasstudio.ca">Arias Studio</a></p>
         </div>
       </div>
     </>
