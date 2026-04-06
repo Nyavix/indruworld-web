@@ -14,7 +14,7 @@ export async function subscribeEmail(email: string): Promise<{ success: boolean;
   const response = await fetch(url, {
     method: 'POST',
     headers: {
-      Authorization: `apikey ${apiKey}`,
+      Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString('base64')}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -23,15 +23,16 @@ export async function subscribeEmail(email: string): Promise<{ success: boolean;
     }),
   })
 
+  const data = await response.json()
+
   if (response.ok) {
     return { success: true }
   }
-
-  const data = await response.json()
 
   if (data.title === 'Member Exists') {
     return { success: true }
   }
 
-  return { success: false, error: 'Something went wrong. Please try again.' }
+  console.error('Mailchimp error:', data)
+  return { success: false, error: data.detail ?? 'Something went wrong. Please try again.' }
 }
