@@ -1,6 +1,11 @@
 'use server'
 
-export async function subscribeEmail(email: string): Promise<{ success: boolean; error?: string }> {
+export async function subscribeEmail(
+  email: string,
+  firstName = '',
+  lastName = '',
+  phone = '',
+): Promise<{ success: boolean; error?: string }> {
   const apiKey = process.env.MAILCHIMP_API_KEY
   const listId = process.env.MAILCHIMP_LIST_ID
   const serverPrefix = process.env.MAILCHIMP_SERVER_PREFIX
@@ -20,6 +25,11 @@ export async function subscribeEmail(email: string): Promise<{ success: boolean;
     body: JSON.stringify({
       email_address: email,
       status: 'subscribed',
+      merge_fields: {
+        FNAME: firstName,
+        LNAME: lastName,
+        PHONE: phone,
+      },
     }),
   })
 

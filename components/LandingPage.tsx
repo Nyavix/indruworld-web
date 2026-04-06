@@ -33,6 +33,9 @@ interface AmbientData {
 }
 
 export default function LandingPage() {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
@@ -114,13 +117,13 @@ export default function LandingPage() {
   }, [])
 
   async function handlePresave() {
-    if (!email || !email.includes('@') || !email.includes('.')) {
+    if (!firstName.trim() || !lastName.trim() || !email || !email.includes('@') || !email.includes('.')) {
       setShake(true)
       setTimeout(() => setShake(false), 500)
       return
     }
     setStatus('loading')
-    const result = await subscribeEmail(email)
+    const result = await subscribeEmail(email, firstName.trim(), lastName.trim(), phone.trim())
     if (result.success) {
       setStatus('success')
     } else {
@@ -203,10 +206,36 @@ export default function LandingPage() {
             </p>
 
             {status !== 'success' ? (
-              <div className="input-group">
+              <div className={`input-group${shake ? ' shake' : ''}`}>
+                <div className="name-row">
+                  <input
+                    type="text"
+                    className="email-input"
+                    placeholder="first name"
+                    value={firstName}
+                    onChange={e => setFirstName(e.target.value)}
+                    autoComplete="given-name"
+                  />
+                  <input
+                    type="text"
+                    className="email-input"
+                    placeholder="last name"
+                    value={lastName}
+                    onChange={e => setLastName(e.target.value)}
+                    autoComplete="family-name"
+                  />
+                </div>
+                <input
+                  type="tel"
+                  className="email-input"
+                  placeholder="phone number (optional)"
+                  value={phone}
+                  onChange={e => setPhone(e.target.value)}
+                  autoComplete="tel"
+                />
                 <input
                   type="email"
-                  className={`email-input${shake ? ' shake' : ''}`}
+                  className="email-input"
                   placeholder="your email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}

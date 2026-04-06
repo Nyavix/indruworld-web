@@ -161,6 +161,9 @@ body {
 
 /* === INPUT === */
 .input-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.input-group.shake { animation: shake 0.4s ease; }
+.name-row { display: flex; gap: 12px; }
+.name-row .email-input { flex: 1; min-width: 0; }
 
 .email-input {
   width: 100%; padding: 16px 20px; border-radius: 50px;
@@ -177,9 +180,8 @@ body {
   background: rgba(255,255,255,0.95);
   box-shadow: 0 0 20px rgba(255,105,180,0.15);
 }
-.email-input.shake {
+.input-group.shake .email-input {
   border-color: var(--pink-hot);
-  animation: shake 0.4s ease;
 }
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
