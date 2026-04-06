@@ -16,6 +16,20 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: 'DRü — Presave',
   description: 'Presave "Trucks Broke Down" by DRü and get early access to everything.',
+  icons: {
+    icon: [
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', rel: 'shortcut icon' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' },
+    ],
+  },
+  appleWebApp: {
+    title: 'In DRÜ World',
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
